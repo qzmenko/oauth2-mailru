@@ -1,8 +1,12 @@
 {
-    "name": "aego/oauth2-mailru",
+    "name": "qzmenko/oauth2-mailru",
     "description": "Mail.ru provider for league/oauth2-client",
     "license": "MIT",
     "authors": [
+        {
+            "name": "Anton Kuzmenko",
+            "email": "kuzmenkomzk@gmail.com"
+        },
         {
             "name": "Alexey Rakeev",
             "email": "alexey@rakeev.name"
@@ -17,12 +21,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Aego\\OAuth2\\Client\\Provider\\": "src/"
+            "Qzmenko\\OAuth2\\Client\\Provider\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Aego\\OAuth2\\Client\\Test\\Provider\\": "test/"
+            "Qzmenko\\OAuth2\\Client\\Test\\Provider\\": "test/"
         }
     }
 }

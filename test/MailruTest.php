@@ -1,8 +1,8 @@
 <?php
-namespace Aego\OAuth2\Client\Test\Provider;
+namespace Qzmenko\OAuth2\Client\Test\Provider;
 
-use Aego\OAuth2\Client\Provider\Mailru;
-use Aego\OAuth2\Client\Provider\MailruResourceOwner;
+use Qzmenko\OAuth2\Client\Provider\Mailru;
+use Qzmenko\OAuth2\Client\Provider\MailruResourceOwner;
 
 class MailruTest extends \PHPUnit_Framework_TestCase
 {
@@ -16,7 +16,7 @@ class MailruTest extends \PHPUnit_Framework_TestCase
     /**
      * Mail.ru instance provider
      *
-     * @var Aego\OAuth2\Client\Provider\Mailru
+     * @var Qzmenko\OAuth2\Client\Provider\Mailru
      */
     protected $provider;
 
