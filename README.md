@@ -1,6 +1,5 @@
 # Mail.ru OAuth2 client provider
 
-[![Build Status](https://img.shields.io/travis/qzmenko/oauth2-mailru.svg)](https://travis-ci.org/qzmenko/oauth2-mailru)
 [![Latest Version](https://img.shields.io/packagist/v/qzmenko/oauth2-mailru.svg)](https://packagist.org/packages/qzmenko/oauth2-mailru)
 [![License](https://img.shields.io/packagist/l/qzmenko/oauth2-mailru.svg)](https://packagist.org/packages/qzmenko/oauth2-mailru)
 
