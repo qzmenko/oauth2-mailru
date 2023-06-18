@@ -30,79 +30,106 @@ class MailruResourceOwner implements ResourceOwnerInterface
      */
     public function getId()
     {
-        return $this->response['id'];
+        return $this->getResponseValue('id');
     }
 
     /**
      * User's email address
      *
-     * @return string Email address
+     * @return string|null
+     *   Email address.
      */
     public function getEmail()
     {
-        return $this->response['email'];
+        return $this->getResponseValue('email');
     }
 
     /**
      * User's full name.
      *
-     * Concatenated from first name and last name
-     *
-     * @return string Full name
+     * @return string|null
+     *   Full name.
      */
     public function getName()
     {
-        return $this->response['first_name'] . ' ' . $this->response['last_name'];
+        return $this->getResponseValue('name');
     }
 
     /**
      * User's first name
      *
-     * @return string First name
+     * @return string|null
+     *   First name
      */
     public function getFirstName()
     {
-        return $this->response['first_name'];
+        return $this->getResponseValue('first_name');
     }
 
     /**
      * User's last name
      *
-     * @return string Last name
+     * @return string|null
+     *   Last name.
      */
     public function getLastName()
     {
-        return $this->response['last_name'];
+        return $this->getResponseValue('last_name');
     }
 
     /**
      * User's nickname
      *
-     * @return string Nickname
+     * @return string|null
+     *   Nickname.
      */
     public function getNickname()
     {
-        return $this->response['nickname'];
+        return $this->getResponseValue('nickname');
     }
 
     /**
      * User's profile picture url
      *
-     * @return string Profile picture url
+     * @return string|null
+     *   Profile picture url.
      */
     public function getImageUrl()
     {
-        return $this->response['image'] ?: '';
+        return $this->getResponseValue('image');
     }
 
     /**
      * User's gender
      *
-     * @return string Gender
+     * @return string|null
+     *   Gender.
      */
     public function getGender()
     {
-        return $this->response['gender'] === 'f' ? 'female' : 'male' ;
+        return $this->getResponseValue('gender');
+    }
+
+    /**
+     * User's locale
+     *
+     * @return string|null
+     *   Locale.
+     */
+    public function getLocale()
+    {
+        return $this->getResponseValue('locale');
+    }
+
+    /**
+     * User's birthday
+     *
+     * @return string|null
+     *   Birthday.
+     */
+    public function getBirthday()
+    {
+        return $this->getResponseValue('birthday');
     }
 
     /**
@@ -111,6 +138,20 @@ class MailruResourceOwner implements ResourceOwnerInterface
     public function toArray()
     {
         return $this->response;
+    }
+
+    /**
+     * Get value by key from response.
+     *
+     * @param $key
+     *   Key to get, e.g. 'id', 'email', etc.
+     *
+     * @return mixed|null
+     *   Value from response or NULL if not found.
+     */
+    private function getResponseValue($key)
+    {
+        return isset($this->response[$key]) ? $this->response[$key] : NULL;
     }
 
 }
